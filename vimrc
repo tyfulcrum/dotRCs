@@ -31,9 +31,9 @@ Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'wincent/command-t'
 Plugin 'scrooloose/syntastic'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'vim-ruby/vim-ruby'
+"Plugin 'vim-ruby/vim-ruby'
 Plugin 'majutsushi/tagbar'
-Plugin 'vim-scripts/VimIM'
+"Plugin 'vim-scripts/VimIM'
 "Plugin 'rdnetto/YCM-Generator'
 "Plugin 'gilligan/vim-lldb'
 " 全局配置文件
@@ -94,8 +94,8 @@ set bs=2                    "在insert模式下用退格键删除
 set showmatch               "代码匹配
 set laststatus=2            "总是显示状态行
 set expandtab               "以下三个配置配合使用，设置tab和缩进空格数
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 set cursorline              "为光标所在行加下划线
 set number                  "显示行号
 set relativenumber          "相对行号
@@ -190,7 +190,7 @@ let g:syntastic_cpp_include_dirs = ['/usr/include/']
 let g:syntastic_cpp_remove_include_errors = 1
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libstdc++'
+let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libc++'
 let g:syntastic_enable_balloons = 1	"whether to show balloons
 let g:ycm_python_binary_path = '/usr/bin/python3'
 
@@ -208,3 +208,5 @@ let g:vimim_cloud=-1
 "if $TMUX == ''
 "    set clipboard+=unnamed
 "endif
+let g:ycm_rust_src_path = '/Users/yangzj/tmp/rustc-1.13.0/src'
+autocmd FileType py set shiftwidth=4 | set expandtab
