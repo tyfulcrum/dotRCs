@@ -92,7 +92,7 @@ alias proxyoff="unset http_proxy;unset https_proxy;"
 alias a2c="aria2c -k1M -s10 -c -x10"
 alias scan-build="/usr/local/opt/llvm/share/clang/tools/scan-build/bin/scan-build"
 alias scan-view="/usr/local/opt/llvm/share/clang/tools/scan-view/bin/scan-view"
-alias sho="ssh yangzj@192.168.1.104"
+alias sho="ssh -p 2222 yangzj@127.0.0.1"
 alias gcc="gcc-6"
 alias g++="g++-6"
 alias pr="pry --simple-prompt"
@@ -113,3 +113,4 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PATH="/usr/local/sbin:$PATH"
 
 export EDITOR='vim'
+#export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
