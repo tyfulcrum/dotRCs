@@ -86,7 +86,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH:/usr/local/texlive/2016/bin/x86_64-darwin:$POWERLINE_CONFIG_COMMAND
+export PATH=/usr/local/bin:$PATH:/usr/local/texlive/2016/bin/x86_64-darwin:$POWERLINE_CONFIG_COMMAND
 alias proxyon="export https_proxy=http://127.0.0.1:6152;export http_proxy=http://127.0.0.1:6152;"
 alias proxyoff="unset http_proxy;unset https_proxy;"
 alias a2c="aria2c -k1M -s10 -c -x10"
@@ -113,4 +113,4 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PATH="/usr/local/sbin:$PATH"
 
 export EDITOR='vim'
-#export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
