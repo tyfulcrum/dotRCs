@@ -87,12 +87,12 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export PATH=/usr/local/bin:$PATH:/usr/local/texlive/2016/bin/x86_64-darwin:$POWERLINE_CONFIG_COMMAND
-alias proxyon="export https_proxy=http://127.0.0.1:6152;export http_proxy=http://127.0.0.1:6152;"
-alias proxyoff="unset http_proxy;unset https_proxy;"
+alias pon="export https_proxy=http://127.0.0.1:6152;export http_proxy=http://127.0.0.1:6152;"
+alias poff="unset http_proxy;unset https_proxy;"
 alias a2c="aria2c -k1M -s10 -c -x10"
 alias scan-build="/usr/local/opt/llvm/share/clang/tools/scan-build/bin/scan-build"
 alias scan-view="/usr/local/opt/llvm/share/clang/tools/scan-view/bin/scan-view"
-alias sho="ssh -p 2222 yangzj@127.0.0.1"
+alias sho="mosh yangzj@192.168.1.103"
 alias gcc="gcc-6"
 alias g++="g++-6"
 alias pr="pry --simple-prompt"
