@@ -4,7 +4,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/yangzj/.oh-my-zsh
 
-export POWERLINE_CONFIG_COMMAND=/usr/local/bin/powerline-config
+export POWERLINE_CONFIG_COMMAND=/Users/yangzj/Library/Python/3.6/bin/powerline-config
 #. /Users/yangzj/Library/Python/3.5/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -59,7 +59,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
+export MANPATH="/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/man:/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -87,15 +87,18 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export PATH=/usr/local/bin:$PATH:/usr/local/texlive/2016/bin/x86_64-darwin:$POWERLINE_CONFIG_COMMAND
-alias pon="export https_proxy=http://127.0.0.1:6152;export http_proxy=http://127.0.0.1:6152;"
+alias pon="export https_proxy=http://127.0.0.1:6152;export http_proxy=http://127.0.0.1:6152"
 alias poff="unset http_proxy;unset https_proxy;"
 alias a2c="aria2c -k1M -s10 -c -x10"
 alias scan-build="/usr/local/opt/llvm/share/clang/tools/scan-build/bin/scan-build"
 alias scan-view="/usr/local/opt/llvm/share/clang/tools/scan-view/bin/scan-view"
-alias sho="mosh yangzj@127.0.0.1 --ssh='ssh -p 2222'"
+alias sho="mosh -p 60000 yangzj@127.0.0.1 --ssh='ssh -p 2222'"
+alias vms="VBoxManage startvm suse --type headless"
 alias gcc="gcc-6"
 alias g++="g++-6"
 alias pr="pry --simple-prompt"
+alias s256="gsha256sum"
+alias bup="pon; brew update; brew upgrade; brew cleanup"
 ## completion
 #autoload -U compinit
 #compinit
