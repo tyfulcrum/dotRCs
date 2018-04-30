@@ -1,73 +1,89 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-"Plugin 'L9'
-" Git plugin not hosted on GitHub
-"Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-"Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Avoid a name conflict with L9
-"Plugin 'user/L9', {'name': 'newL9'}
-
-Plugin 'scrooloose/nerdtree'
-Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'wincent/command-t'
-Plugin 'scrooloose/syntastic'
-Plugin 'Valloric/YouCompleteMe'
-"Plugin 'vim-ruby/vim-ruby'
-Plugin 'majutsushi/tagbar'
-Plugin 'tpope/vim-rails'
-"Plugin 'vim-scripts/VimIM'
-"Plugin 'rdnetto/YCM-Generator'
-"Plugin 'gilligan/vim-lldb'
-" 全局配置文件
-"let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
-
-"Plugin 'jeaye/color_coded'
-
-"Plugin 'Shougo/vimproc.vim'
-"Plugin 'lyuts/vim-rtags'
-"Plugin 'elzr/vim-json'
-"Plugin 'Shougo/vimshell.vim'
-"Plugin 'rdnetto/YCM-Generator'
-"Plugin 'rust-lang/rust.vim'
-"Plugin 'dag/vim2hs'
+" Make sure you use single quotes
 
 
+Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plug 'Valloric/YouCompleteMe'
+Plug 'w0rp/ale'
+"Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
+" Initialize plugin system
+call plug#end()
+"set nocompatible              " be iMproved, required
+"filetype off                  " required
 "
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"" set the runtime path to include Vundle and initialize
+"set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin()
+"" alternatively, pass a path where Vundle should install plugins
+""call vundle#begin('~/some/path/here')
 "
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
+"" let Vundle manage Vundle, required
+"Plugin 'gmarik/Vundle.vim'
+"
+"" The following are examples of different formats supported.
+"" Keep Plugin commands between vundle#begin/end.
+"" plugin on GitHub repo
+"Plugin 'tpope/vim-fugitive'
+"" plugin from http://vim-scripts.org/vim/scripts.html
+""Plugin 'L9'
+"" Git plugin not hosted on GitHub
+""Plugin 'git://git.wincent.com/command-t.git'
+"" git repos on your local machine (i.e. when working on your own plugin)
+""Plugin 'file:///home/gmarik/path/to/plugin'
+"" The sparkup vim script is in a subdirectory of this repo called vim.
+"" Pass the path to set the runtimepath properly.
+"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+"" Avoid a name conflict with L9
+""Plugin 'user/L9', {'name': 'newL9'}
+"
+"Plugin 'scrooloose/nerdtree'
+"Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+"Plugin 'wincent/command-t'
+"Plugin 'scrooloose/syntastic'
+"Plugin 'Valloric/YouCompleteMe'
+""Plugin 'vim-ruby/vim-ruby'
+"Plugin 'majutsushi/tagbar'
+"Plugin 'tpope/vim-rails'
+""Plugin 'vim-scripts/VimIM'
+""Plugin 'rdnetto/YCM-Generator'
+""Plugin 'gilligan/vim-lldb'
+"" 全局配置文件
+""let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+"
+""Plugin 'jeaye/color_coded'
+"
+""Plugin 'Shougo/vimproc.vim'
+""Plugin 'lyuts/vim-rtags'
+""Plugin 'elzr/vim-json'
+""Plugin 'Shougo/vimshell.vim'
+""Plugin 'rdnetto/YCM-Generator'
+""Plugin 'rust-lang/rust.vim'
+""Plugin 'dag/vim2hs'
+"
+"
+"
+"
+"" All of your Plugins must be added before the following line
+"call vundle#end()            " required
+"filetype plugin indent on    " required
+"" To ignore plugin indent changes, instead use:
+""filetype plugin on
+""
+"" Brief help
+"" :PluginList       - lists configured plugins
+"" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+"" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+"" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+""
+"" see :h vundle for more details or wiki for FAQ
+"" Put your non-Plugin stuff after this line
+"
 syntax on
 "set background=light
 "colorscheme solarized
@@ -75,17 +91,20 @@ colorscheme molokai
 "set background = dark
 
 "set guifont=Source\ Code\ Pro\ for\ Powerline\ Regular:h14
-if has("gui_running")
-    set transparency=20
-  if has("gui_gtk2")
-    set guifont=Inconsolata\ 12
-  elseif has("gui_macvim")
-    set guifont=Inziu\ Iosevka\ SC:h16
-  elseif has("gui_win32")
-    set guifont=Consolas:h11:cANSI
-  endif
-endif
+"if has("gui_running")
+"    set transparency=20
+"  if has("gui_gtk2")
+"    set guifont=Inconsolata\ 12
+"  elseif has("gui_macvim")
+"set guifont=Sarasa\ Gothic\ SC:h16
+set guifont=Sarasa\ Mono\ SC:h16
+"set guifont=Inziu\ Iosevka\ SC:h16
+"  elseif has("gui_win32")
+"    set guifont=Consolas:h11:cANSI
+"  endif
+"endif
 
+set colorcolumn=80
 
 syn on                      "语法支持
 
@@ -112,6 +131,14 @@ set autochdir               "自动切换当前目录
 "set foldmethod=syntax       "代码折叠
 ""}}
 
+" 当光标一段时间保持不动了，就禁用高亮
+autocmd cursorhold * set nohlsearch
+" 当输入查找命令时，再启用高亮
+noremap n :set hlsearch<cr>n
+noremap N :set hlsearch<cr>N
+noremap / :set hlsearch<cr>/
+noremap ? :set hlsearch<cr>?
+noremap * *:set hlsearch<cr>
 "conf for tabs, 为标签页进行的配置，通过ctrl h/l切换标签等
 let mapleader = ','
 nnoremap <C-l> gt
@@ -177,37 +204,56 @@ let g:ycm_autoclose_preview_window_after_completion=1
 "map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " 修改对C函数的补全快捷键，默认是CTRL + space，修改为ALT + ;
 
-
-
-let g:syntastic_error_symbol = '✗'	"set error or warning signs
-let g:syntastic_warning_symbol = '⚠'
-let g:syntastic_check_on_open=1
-let g:syntastic_enable_highlighting = 0
-"let g:syntastic_python_checker="flake8,pyflakes,pep8,pylint"
-let g:syntastic_python_checkers=['pyflakes']
-"highlight SyntasticErrorSign guifg=white guibg=black
-
-let g:syntastic_cpp_include_dirs = ['/usr/include/']
-let g:syntastic_cpp_remove_include_errors = 1
-let g:syntastic_cpp_check_header = 1
-let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libc++'
-let g:syntastic_enable_balloons = 1	"whether to show balloons
 let g:ycm_python_binary_path = '/usr/bin/python3'
+
+let g:ale_linters_explicit = 1
+let g:ale_completion_delay = 500
+let g:ale_echo_delay = 20
+let g:ale_lint_delay = 500
+let g:ale_echo_msg_format = '[%linter%] %code: %%s'
+let g:ale_lint_on_text_changed = 'normal'
+let g:ale_lint_on_insert_leave = 1
+let g:airline#extensions#ale#enabled = 1
+
+let g:ale_c_gcc_options = '-Wall -O2 -std=c99'
+let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++14'
+let g:ale_c_cppcheck_options = ''
+let g:ale_cpp_cppcheck_options = ''
+
+let g:ale_sign_error = "\ue009\ue009"
+hi! clear SpellBad
+hi! clear SpellCap
+hi! clear SpellRare
+hi! SpellBad gui=undercurl guisp=red
+hi! SpellCap gui=undercurl guisp=blue
+hi! SpellRare gui=undercurl guisp=magenta
+
+
+"let g:syntastic_error_symbol = '✗'	"set error or warning signs
+"let g:syntastic_warning_symbol = '⚠'
+"let g:syntastic_check_on_open=1
+"let g:syntastic_enable_highlighting = 0
+""let g:syntastic_python_checker="flake8,pyflakes,pep8,pylint"
+"let g:syntastic_python_checkers=['pyflakes']
+""highlight SyntasticErrorSign guifg=white guibg=black
+"
+"let g:syntastic_cpp_include_dirs = ['/usr/include/']
+"let g:syntastic_cpp_remove_include_errors = 1
+"let g:syntastic_cpp_check_header = 1
+"let g:syntastic_cpp_compiler = 'clang++'
+"let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libc++'
+"let g:syntastic_enable_balloons = 1	"whether to show balloons
 
 
 "打开自动监测
 let g:fencview_autodetect = 1
 set mouse=a
 
-"let g:rustfmt_autosave = 1
-
-let g:vimim_plugin=0
-let g:vimim_punctuation=2
-let g:vimim_toggle='zhengma'
-let g:vimim_cloud=-1
-"if $TMUX == ''
-"    set clipboard+=unnamed
-"endif
-let g:ycm_rust_src_path = '/Users/yangzj/tmp/rustc-1.13.0/src'
+"let g:vimim_plugin=0
+"let g:vimim_punctuation=2
+"let g:vimim_toggle='zhengma'
+"let g:vimim_cloud=-1
+""if $TMUX == ''
+""    set clipboard+=unnamed
+""endif
 autocmd FileType py set shiftwidth=4 | set expandtab

@@ -80,4 +80,10 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+### Jekyll ###
+_site/
+.sass-cache/
+.jekyll-metadata
+
+# # End of https://www.gitignore.io/api/jekyll
 # End of https://www.gitignore.io/api/macos,linux,vim,windows

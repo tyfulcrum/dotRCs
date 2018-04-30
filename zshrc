@@ -87,15 +87,16 @@ export MANPATH="/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/man:/
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export PATH=/usr/local/bin:$PATH:/usr/local/texlive/2016/bin/x86_64-darwin:$POWERLINE_CONFIG_COMMAND
-alias pon="export https_proxy=http://127.0.0.1:6152;export http_proxy=http://127.0.0.1:6152"
+# alias pon="export https_proxy=http://127.0.0.1:6152;export http_proxy=http://127.0.0.1:6152"
+alias pon="export ALL_PROXY=socks5h://localhost:33762"
 alias poff="unset http_proxy;unset https_proxy;"
 alias a2c="aria2c -k1M -s10 -c -x10"
 alias scan-build="/usr/local/opt/llvm/share/clang/tools/scan-build/bin/scan-build"
 alias scan-view="/usr/local/opt/llvm/share/clang/tools/scan-view/bin/scan-view"
 alias sho="mosh -p 60000 yangzj@127.0.0.1 --ssh='ssh -p 2222'"
-alias vms="VBoxManage startvm suse --type headless"
-alias gcc="gcc-6"
-alias g++="g++-6"
+alias vms="VBoxManage startvm openSUSE --type headless"
+alias gcc="gcc-7"
+alias g++="g++-7"
 alias pr="pry --simple-prompt"
 alias s256="gsha256sum"
 alias bup="pon; brew update; brew upgrade; brew cleanup"
@@ -116,4 +117,4 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PATH="/usr/local/sbin:$PATH"
 
 export EDITOR='vim'
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
