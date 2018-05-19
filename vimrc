@@ -11,6 +11,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'w0rp/ale'
 "Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+Plug 'wikitopian/hardmode'
 
 " Initialize plugin system
 call plug#end()
@@ -84,6 +85,8 @@ call plug#end()
 "" see :h vundle for more details or wiki for FAQ
 "" Put your non-Plugin stuff after this line
 "
+"autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+
 syntax on
 "set background=light
 "colorscheme solarized
